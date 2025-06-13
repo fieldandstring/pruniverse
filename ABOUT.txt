@@ -1,0 +1,33 @@
+ABOUT.txt
+
+This repo is a demonstration of modular, blockwise pruning in neural networks.
+It’s built for quick experiments, visualization, and hardware benchmarking—nothing hidden, nothing proprietary.
+
+What’s here:
+	•	A neural network made of “blocks.”
+	•	You can freeze the least-active blocks during training, and revive them if the model starts to struggle.
+	•	Everything is logged and plotted—loss, entropy, FLOPS, effort, and the full sleep/wake history of each block.
+	•	All dials are exposed at the command line. Tweak, rerun, repeat.
+
+What this isn’t:
+	•	There’s no custom kernel, no special math, and no secret optimization trick.
+	•	This is not a production system or a new algorithm.
+	•	You won’t find the actual “fieldblock” IP or anything not safe to share.
+
+Why does this exist?
+	•	To show, not just tell, how field pruning works—visibly, for anyone.
+	•	For teaching, hardware testing, or as a baseline for new ideas.
+	•	So you can run and explain dynamic pruning in five minutes, not fifty.
+
+Run, tune, break, and rerun.
+If you want the real magic, you’ll have to look somewhere else.
+
+Questions or comments: contact@fieldandstring.com
+
+⸻
+
+CULTURE NOTES (FOR THE DEEPLY BORED OR DEEPLY SERIOUS)
+
+Theo de Raadt: “Make everything explicit. No mystery. That’s the standard.”
+Jocko: “Discipline equals freedom. Prune what doesn’t matter.”
+Terry Tate: “If you leave dead blocks awake, you WILL get blindsided.”

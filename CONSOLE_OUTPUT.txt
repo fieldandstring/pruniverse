@@ -1,0 +1,82 @@
+-- EXAMPLE LOGS --
+
+HOW TO READ THESE EXAMPLES
+ • “Block X frozen” lines show which network modules were turned off, with their measured norm.
+ • “Revival” lines show when the fieldblock wakes up after loss spikes—adaptive, not random.
+ • “loss=…” lines print every major step, so you see the effect of pruning and revival on learning.
+ • “Final Stats” are printed automatically at the end of every run.
+ • “Wall Time” lets you compare real speed, not just theory.
+
+PRUNEML-DEMO: Pruning is on, blocks sleep and wake.
+ADAM: Pruning is off, all blocks stay awake.
+
+If you want different results, just rerun with new settings.
+Nothing up the sleeve.
+
+PRUNIVERSE // PRUNEML-DEMO
+
+(.venv) [PRUNIVERSE]$ python pruniverse_toymachine.py
+[50] Block 15 frozen (norm=13.0840)
+[100] Block 13 frozen (norm=16.0306)
+[123] Revival: Loss 0.5441 > 2.0× min_loss 0.2642
+[150] Block 15 frozen (norm=14.3040)
+[200] Block 13 frozen (norm=18.4229)
+[200] loss=0.2352 frozen=2 effort=305.18 entropy=2.303 flops=13008896
+[250] Block 14 frozen (norm=20.7729)
+[300] Block 6 frozen (norm=22.1560)
+[324] Revival: Loss 0.6553 > 2.0× min_loss 0.0984
+[350] Block 15 frozen (norm=15.2149)
+[400] Block 13 frozen (norm=20.9249)
+[400] loss=0.2941 frozen=2 effort=349.10 entropy=2.303 flops=13008896
+[450] Block 14 frozen (norm=22.3299)
+[500] Block 2 frozen (norm=22.1008)
+[525] Revival: Loss 0.3175 > 2.0× min_loss 0.0935
+[550] Block 15 frozen (norm=14.4145)
+[600] Block 13 frozen (norm=19.6101)
+[600] loss=0.3822 frozen=2 effort=312.25 entropy=2.303 flops=13008896
+[650] Block 14 frozen (norm=22.5396)
+[700] Block 6 frozen (norm=22.6682)
+[728] Revival: Loss 0.2990 > 2.0× min_loss 0.0935
+[750] Block 15 frozen (norm=14.1715)
+[800] Block 13 frozen (norm=21.1272)
+[800] loss=0.2820 frozen=2 effort=387.11 entropy=2.303 flops=13008896
+[850] Block 14 frozen (norm=22.5415)
+[900] Block 6 frozen (norm=23.4938)
+[929] Revival: Loss 0.2642 > 2.0× min_loss 0.0935
+[950] Block 15 frozen (norm=16.0078)
+[1000] Block 13 frozen (norm=19.4361)
+[1000] loss=0.3365 frozen=2 effort=368.43 entropy=2.303 flops=13008896
+Done. Log written to pruniverse_log.csv
+
+--- Pruniverse Toymachine: Final Stats ---
+Steps:       1001
+Final Loss:  0.1992
+Final Entropy: 2.3026
+Frozen Blocks: 2 / 16
+Effort:       367.64
+FLOPS (final): 13008896
+Total Wall Time: 2.15 seconds
+Max Frozen Blocks: 4
+Log file: pruniverse_log.csv
+
+
+PRUNIVERSE // ADAM
+
+(.venv) [PRUNIVERSE]$ python pruniverse_toymachine.py --adam
+[200] loss=0.4625 frozen=0 effort=333.53 entropy=2.303 flops=13008896
+[400] loss=0.4342 frozen=0 effort=361.37 entropy=2.303 flops=13008896
+[600] loss=0.1511 frozen=0 effort=357.97 entropy=2.303 flops=13008896
+[800] loss=0.5020 frozen=0 effort=391.08 entropy=2.303 flops=13008896
+[1000] loss=0.3323 frozen=0 effort=367.97 entropy=2.303 flops=13008896
+Done. Log written to pruniverse_log.csv
+
+--- Pruniverse Toymachine: Final Stats ---
+Steps:       1001
+Final Loss:  0.4256
+Final Entropy: 2.3026
+Frozen Blocks: 0 / 16
+Effort:       374.59
+FLOPS (final): 13008896
+Total Wall Time: 2.23 seconds
+No blocks were ever frozen (tune freeze_threshold or pruning logic!)
+Log file: pruniverse_log.csv

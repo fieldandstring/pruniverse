@@ -1,0 +1,65 @@
+PRUNIVERSE TOYMACHINE — FAQ
+
+Q: What does this code do?
+A:
+Builds a modular neural network, prunes it block by block in real time, and logs every detail. You control how, when, and how hard blocks are frozen or revived. Everything is explicit. There’s no magic. You see the trade-offs, not just the curve.
+
+⸻
+
+Q: Is this safe to share?
+A:
+Absolutely. There’s no proprietary math, no secret kernel, and no unpublished optimization trick. If you want a secret weapon, look elsewhere. This is for demo, teaching, and benchmarking only.
+
+⸻
+
+Q: Why blockwise pruning?
+A:
+It’s about resource control. You want to know what your model can do without, and how much slack you’re carrying. Prune dead weight, keep what matters, watch how the model adapts under stress.
+
+⸻
+
+Q: What should I tweak?
+A:
+	•	--freeze_threshold: How “lazy” a block must be to get benched.
+	•	--prune_every: How often to prune.
+	•	--freeze_n: How many blocks to freeze each cycle.
+	•	--revive_margin: How hard a loss spike must be to wake the field.
+	•	--adam: For baseline, disables all pruning.
+
+⸻
+
+Q: What’s that heatmap at the bottom?
+A:
+It’s the block activity map. Dark means asleep, light means awake. It’s the only honest record of what your model is doing with its capacity. If you can’t explain this, you’re not ready for prod.
+
+⸻
+
+Q: Can I run this anywhere?
+A:
+Yes. CPU, GPU, embedded, Raspberry Pi, VM, your 2012 ThinkPad. Add a PMIC hook for power, or wire up your own logger. No special hardware required.
+
+⸻
+
+Q: How is this different from regular dropout or pruning?
+A:
+Dropout is random and temporary. Typical pruning is one-shot, permanent, and often silent. Here, every pruning decision is logged, visible, and reversible. If a block’s needed, it comes back. If not, it sleeps.
+
+⸻
+
+Q: Will this make my model better?
+A:
+No guarantees. This is about insight, not leaderboard points. You learn what matters, you see what’s wasted.
+
+⸻
+
+Q: Who is this for?
+A:
+Engineers who want clean, observable experiments. People benchmarking hardware or looking for energy wins. Anyone who needs proof before poetry. If you’re here for magic, you’re in the wrong cathedral.
+
+⸻
+
+Q: What should I never do with this?
+A:
+Never claim it’s new science. Never ship it without checking what’s actually being frozen. Never ignore the logs. Never forget: the field will embarrass you if you let it.
+
+⸻
