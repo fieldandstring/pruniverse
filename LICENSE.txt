@@ -1,0 +1,22 @@
+Copyright (c) 2025 Field & String, Inc. All rights reserved.
+
+This software, including all associated source code, documentation, and files (the “Software”), is provided solely for non-commercial, academic research, and educational demonstration purposes.
+
+**Prohibited Uses:**  
+Any use of the Software, in whole or in part, for commercial purposes, including but not limited to incorporation into a proprietary or for-profit product, service, or application, is strictly prohibited without the express prior written consent of the copyright holder.
+
+**Permitted Uses:**  
+You may copy, modify, and redistribute the Software, or works derived from the Software, for non-commercial purposes only, provided that (i) this copyright notice and license are included in all copies or substantial portions of the Software, and (ii) no charge or other consideration is received for such use, copying, modification, or redistribution, other than reimbursement for reasonable costs of reproduction or distribution.
+
+**No Warranty; Limitation of Liability:**  
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+**Commercial Licensing:**  
+If you wish to use the Software, or any derivative work, for any commercial purpose, you must obtain a commercial license from the copyright holder.
+
+**Contact:**  
+For commercial licensing inquiries, please contact: contact@fieldandstring.com
+
+---
+
+This license is intended to maximize academic and research freedom while strictly prohibiting unlicensed commercial use or exploitation.

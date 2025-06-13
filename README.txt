@@ -1,6 +1,10 @@
 README.txt
 ==========
 
+This code is licensed for non-commercial research and demonstration only. For commercial licensing, see LICENSE.txt or contact [contact@fieldandstring.com].
+
+---
+
 Jocko says: “Few things actually matter. Align your energy and your will on the things that do.”
 
 This repo is a bare-bones, fully visible demonstration of modular fieldblock pruning for neural networks.
