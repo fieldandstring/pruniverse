@@ -217,8 +217,8 @@ def main():
     block_states_arr = np.array(block_states).T  # shape: [num_blocks, steps]
     fig2, ax = plt.subplots(figsize=(14,3))
     ax.imshow(1-block_states_arr, aspect="auto", cmap="Purples", interpolation="nearest")
-    ax.set_yticks(np.arange(num_blocks))
-    ax.set_yticklabels([f"Block {i}" for i in range(num_blocks)])
+    ax.set_yticks(np.arange(0, num_blocks, 2))
+    ax.set_yticklabels([f"Block {i}" for i in range(0, num_blocks, 2)], fontsize=8)
     ax.set_xlabel("Step")
     ax.set_title("Frozen Blocks Per Step (dark = frozen, light = active)")
     plt.tight_layout()
